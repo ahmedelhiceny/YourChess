@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/Learn.css">
+    <link rel="icon" href="../Images/Sign.png">
+    <title>YourChess/Learn</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="qaz">
+                <img class="img1" src="../Images/Sign.png" alt="Chess">
+                <h1>Your<span>Chess</span></h1>
+            </div>
+            <ul>
+                <li><a href="./main.html">Home</a></li>
+                <li><a href="#" onclick="getStart()">Play</a></li>
+                <li><a href="./learn.html">Learn</a></li>
+                <li><a href="../HTML/main.html">LogIn</a></li>
+            </ul>
+        </div>
+        <div class="Practise">
+            <button onclick="StartGame()">Play With System</button>
+            <button onclick="StartGame()">Play With Friend </button>
+        </div>
+        <div class="content" onclick="stopPlay()">
+            <div class="video">
+                <iframe width="400" height="300" src="https://www.youtube.com/embed/GQvR_fLkNKo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="list">
+                <div><img src="../Images/leason1-1.jpg" width="150" height="150" onclick="turnVideo(1);"></div>
+                <div><img src="../Images/leason1-2.jpg" width="150" height="150" onclick="turnVideo(2);"></div>
+                <div><img src="../Images/leason1-3.jpg" width="150" height="150" onclick="turnVideo(3);"></div>
+                <div><img src="../Images/leason1-4.jpg" width="150" height="150" onclick="turnVideo(4);"></div>
+                <div><img src="../Images/leason1-5.jpg" width="150" height="150" onclick="turnVideo(5);"></div>
+                <div><img src="../Images/leason1-6.jpg" width="150" height="150" onclick="turnVideo(6);"></div>
+                <div><img src="../Images/leason1-7.jpg" width="150" height="150" onclick="turnVideo(7);"></div>
+            </div>
+        </div>
+        <div class="cources">
+            <div class="co1">
+                <div onmouseout="HideItem(this)" onmouseover="ShowItem(this)" onclick="getCourse(1)"><img src="../Images/pexels-sebastian-voortman-411195.jpg">
+                    <div>Course1</div>
+                </div>
+                <div onmouseout="HideItem(this)" onmouseover="ShowItem(this)" onclick="getCourse(2)"><img src="../Images/pexels-nothing-ahead-4602499.jpg">
+                    <div>Course2</div>
+                </div>
+                <div onmouseout="HideItem(this)" onmouseover="ShowItem(this)" onclick="getCourse(3)"><img src="../Images/pexels-nothing-ahead-4602503.jpg">
+                    <div>Course3</div>
+                </div>
+            </div>
+            <div class="co2">
+                <div onmouseout="HideItem(this)" onmouseover="ShowItem(this)" onclick="getCourse(4)"><img src="../Images/pexels-sebastian-voortman-411207.jpg">
+                    <div>Course4</div>
+                </div>
+                <div onmouseout="HideItem(this)" onmouseover="ShowItem(this)" onclick="getCourse(5)"><img src="../Images/pexels-skitterphoto-1083355.jpg">
+                    <div>Course5</div>
+                </div>
+                <div onmouseout="HideItem(this)" onmouseover="ShowItem(this)" onclick="getCourse(6)"><img src="../Images/pexels-alex-green-5691859.jpg">
+                    <div>Course6</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="left">
+                <img class="img1" src="../Images/Sign.png" alt="Chess">
+                <h2>Your<span>Chess</span></h2>
+            </div>
+            <div class="right">
+                <a href="#"><img src="../Images/twitter.png" alt="FaceBook"></a>
+                <a href="#"><img src="../Images/gmail.png" alt="Gmail"></a>
+                <a href="#"><img src="../Images/facebook.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/file2.js"></script>
+</body>
+
+</html>

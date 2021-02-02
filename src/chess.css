@@ -1,0 +1,309 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    color: black;
+    background-image: url("../Images/pexels-vlada-karpovich-6202970.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#content {
+    background: transparent;
+    padding: 14px 40px;
+    align-self: center;
+}
+
+#help {
+    cursor: help;
+}
+
+#dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: none;
+    cursor: wait;
+}
+
+#chessboard {
+    width: 700px;
+    height: 700px;
+    float: left;
+    padding: 0;
+    margin-left: 68px;
+}
+
+#moves button {
+    width: 100%;
+}
+
+#clear {
+    clear: both;
+    width: 0;
+    height: 0;
+}
+
+#chessboard table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: none;
+    cursor: default;
+    /* see http://goo.gl/1dTy7 (css rule to disable text selection highlighting) */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#chessboard table tr th,
+#chessboard table tr td {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#chessboard table tr th {
+    background: silver;
+    font-size: small;
+    font-weight: normal;
+}
+
+#chessboard table tr th.file {
+    width: 80px;
+    height: 30px;
+}
+
+#chessboard table tr th.rank {
+    width: 30px;
+    height: 80px;
+}
+
+#chessboard table tr:first-child th:first-child {
+    border-top-left-radius: 14px;
+}
+
+#chessboard table tr:first-child th:last-child {
+    border-top-right-radius: 14px;
+}
+
+#chessboard table tr:last-child th:first-child {
+    border-bottom-left-radius: 14px;
+}
+
+#chessboard table tr:last-child th:last-child {
+    border-bottom-right-radius: 14px;
+}
+
+#chessboard table tr td {
+    width: 80px;
+    height: 80px;
+}
+
+#chessboard table tr td.light {
+    text-shadow: 0 0 10px black;
+    background: #E0E0E0;
+    background: -moz-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #c0c0c0));
+    background: -webkit-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
+    background: -o-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
+    background: -ms-linear-gradient(-45deg, #ffffff 0%, #c0c0c0 100%);
+    background: linear-gradient(135deg, white, silver);
+}
+
+#chessboard table tr td.dark {
+    text-shadow: 0 0 10px white;
+    background: #404040;
+    background: -moz-linear-gradient(-45deg, #808080 0%, #000000 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #808080), color-stop(100%, #000000));
+    background: -webkit-linear-gradient(-45deg, #808080 0%, #000000 100%);
+    background: -o-linear-gradient(-45deg, #808080 0%, #000000 100%);
+    background: -ms-linear-gradient(-45deg, #808080 0%, #000000 100%);
+    background: linear-gradient(135deg, gray, black);
+}
+
+#chessboard table tr td div {
+    font-size: 50px;
+}
+
+#chessboard table tr td.white {
+    color: white;
+}
+
+#chessboard table tr td.black {
+    color: black;
+}
+
+#chessboard table tr td.from {
+    font-weight: bold;
+}
+
+#chessboard table tr td.to {
+    box-shadow: inset 0 0 10px 1px green;
+}
+
+#chessboard table tr td.to.capture {
+    box-shadow: inset 0 0 10px 1px red;
+}
+
+#chessboard table tr td.to.en-passant:after {
+    color: red;
+    content: "e.p.";
+}
+
+#chessboard table tr td.to.king-castle:after {
+    color: magenta;
+    content: "0-0";
+}
+
+#chessboard table tr td.to.queen-castle:after {
+    color: magenta;
+    content: "0-0-0";
+}
+
+#chessboard table tr td.to.positional:after,
+#chessboard table tr td.to.double-push:after {
+    color: gray;
+    content: "\2022";
+}
+
+#chessboard table tr td.turn {
+    cursor: move;
+}
+
+#chessboard table tr td div.turn:not(.can-move) {
+    cursor: not-allowed;
+}
+
+#chessboard table tr td.last-move {
+    box-shadow: inset 0 0 10px 1px yellow;
+}
+
+#moves a {
+    color: gray;
+    font-size: 8pt;
+    text-decoration: none;
+}
+
+#moves a.cannot {
+    color: silver;
+    pointer-events: none;
+    cursor: default;
+}
+
+
+/*****************************************/
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.header .leftHeader {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.header .leftHeader img {
+    margin-top: 9px;
+}
+
+.header h1 {
+    color: #bbb4b4;
+    background: none;
+    font-size: 26px;
+    font-family: auto;
+}
+
+.header h1 span {
+    color: #CA9254;
+}
+
+.header ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.header ul li {
+    margin-right: 30px;
+}
+
+.header ul li a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer {
+    width: 100%;
+    height: 61px;
+    background-color: rgb(138, 139, 134);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.footer h2 {
+    cursor: pointer;
+}
+
+.footer .left {
+    width: 30%;
+    height: 31px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.footer .left img {
+    margin-top: 10px;
+}
+
+.footer .left h2 {
+    color: #FFF;
+}
+
+.footer .left h2 span {
+    color: #efac62;
+}
+
+.footer .right {
+    width: 20%;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.footer .right a {
+    margin-right: 50px;
+    margin-top: 5px;
+}

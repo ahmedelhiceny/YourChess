@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="icon" href="../Images/Sign.png">
+    <title>YourChess</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headWeb">
+            <div class="logo">
+                <img class="img1" src="../Images/Sign.png" alt="Chess" width="40" height="40">
+                <h1>Your<span>Chess</span></h1>
+            </div>
+            <ul>
+                <li><a href="./main.html">Home</a></li>
+                <li><a href="#" onclick="choosePlayer()">Play</a></li>
+                <li><a href="./learn.html">Learn</a></li>
+                <li><a href="#" onclick="MoveInLogIn()">LogIn</a></li>
+            </ul>
+        </div>
+        <div class="LogIn">
+            <input type="text" placeholder="UserName">
+            <input type="password" placeholder="PassWord">
+            <p>Forgit PassWord</p>
+            <button>Log In</button>
+            <img src="../Images/sign-in-with-google.png">
+            <img src="../Images/sign-in-with-facebook.png" alt="">
+            <p class="Create" onclick="getSinIn()">Create Account</p>
+        </div>
+        <div class="SignIn">
+            <input type="text" placeholder="FirstName">
+            <input type="text" placeholder="LastName">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="PassWord">
+            <input type="tel" placeholder="Phone">
+            <input type="date" placeholder="Age" style="color:#aca5a5 ;">
+            <button>Sign In</button>
+        </div>
+        <div class="Practise">
+            <button onclick="StartGame()">Play With System</button>
+            <button onclick="StartGame()">Play With Friend </button>
+        </div>
+        <div class="GroupInfo" onclick="MoveOut()">
+            <div class="MyInfo">
+                <img class="img" onclick="MovUp();" src="../Images/exchange.png" width="70" height="70">
+                <h2>Be The Champion <br/> Of the Chess </h2>
+            </div>
+            <button onclick="Start();">Get Start</button>
+        </div>
+    </div>
+    <div class="place" onclick="MoveOut();"></div>
+    <div class="container2">
+        <div class="INF1">
+            <img class="img3" src="../Images/person1.png" alt="Teimour Radjabov">
+            <div>
+                <p>Teimour Radjabov<br/> broke onto the world chess stage as a teenager, earning<br/> the grandmaster title just after his 14th birthday and <br/> scoring a stunning win against Garry Kasparov as <br/> a 15-year-old in Linares 2003, the first
+                    time in seven years<br/> Kasparov had lost a rated game with the white pieces.<br/> That game was also symbolic, as Radjabov was born in <br/> the same city as the “Beast from Baku” and grew up playin<br/> the same hyper-aggressive
+                    openings that Kasparov <br/> had championed in his youth.</p>
+            </div>
+        </div>
+        <div class="INF2">
+            <img class="img4" src="../Images/person2.png" alt="Fabiano Caruana">
+            <div>
+                <p>Fabiano Caruana<br/> The prodigy who broke the record held by Hikaru <br/> Nakamura for America's youngest chess grandmaster,<br/> Fabiano Caruana has climbed the mountain of chess and <br/> reached the summit. This young great master
+                    has had a <br/> ranking as high as number-two in the world and has won <br/> numerous tournaments in his career. In 2018 the American <br/> faced Magnus Carlsen at the World Chess Championship <br/> in London in 2018, losing in the
+                    quick playoffs.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <img onclick="moveCon2();" src="../Images/arrow-88-xxl.png" width="80" height="80">
+        <div class="sli">
+            <div>
+                <p>Have The CourageTo Follow<br/>Your Heart and Intuition</p>
+            </div>
+            <div>
+                <p>Being the richest man in the cemetery doesn’t matter to me. Going<br/> to bed at night saying we’ve done something wonderful… that’s<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    what matters to me</p>
+            </div>
+            <div>
+                <p>Sometimes when you innovate, you make mistakes. It is best to<br/> admit them quickly, and get on with improving your other<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    innovations
+                </p>
+            </div>
+            <div class="placeholder"></div>
+        </div>
+        <img onclick="moveCon();" src="../Images/unnamed.png" width="80" height="80">
+
+    </div>
+    <div class="footer">
+        <div class="left">
+            <img class="img1" src="../Images/Sign.png" alt="Chess" width="40" height="40">
+            <h2>Your<span>Chess</span></h2>
+        </div>
+        <div class="right">
+            <a href="#"><img width="40" height="40" src="../Images/twitter.png" alt="FaceBook"></a>
+            <a href="#"><img width="40" height="40" src="../Images/gmail.png" alt="Gmail"></a>
+            <a href="#"><img width="40" height="40" src="../Images/facebook.png" alt="Twitter"></a>
+        </div>
+    </div>
+    <script src="../JS/file.js"></script>
+</body>
+
+</html>

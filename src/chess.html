@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Chess</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="chess.css">
+    <link rel="shortcut icon" href="chess.ico">
+</head>
+
+<body>
+    <div class="header">
+        <div class="leftHeader">
+            <img class="img1" src="../Images/Sign.png" alt="Chess" width="40" height="40">
+            <h1>Your<span>Chess</span></h1>
+        </div>
+        <ul>
+            <li><a href="../HTML/main.html">Home</a></li>
+            <li><a href="#">Play</a></li>
+            <li><a href="../HTML/learn.html">Learn</a></li>
+            <li><a href="#" onclick="MoveInLogIn()">LogIn</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <div id="chessboard" role="main"></div>
+        <div id="clear"></div>
+    </div>
+    <div class="footer">
+        <div class="left">
+            <img class="img1" src="../Images/Sign.png" alt="Chess" width="40" height="40">
+            <h2>Your<span>Chess</span></h2>
+        </div>
+        <div class="right">
+            <a href="#"><img width="40" height="40" src="../Images/twitter.png" alt="FaceBook"></a>
+            <a href="#"><img width="40" height="40" src="../Images/gmail.png" alt="Gmail"></a>
+            <a href="#"><img width="40" height="40" src="../Images/facebook.png" alt="Twitter"></a>
+        </div>
+    </div>
+    <div id="dim"></div>
+
+    <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="chess.include.js"></script>
+    <script>
+        $(makeChessGame);
+    </script>
+</body>
+
+</html>
